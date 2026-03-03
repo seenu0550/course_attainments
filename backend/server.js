@@ -14,6 +14,9 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+// Routes
+app.use('/api/courses', require('./routes/courses'));
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
