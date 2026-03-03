@@ -16,6 +16,7 @@ app.get('/health', (req, res) => {
 
 // Routes
 app.use('/api/courses', require('./routes/courses'));
+app.use('/api/upload', require('./routes/upload'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
